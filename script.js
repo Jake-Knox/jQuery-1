@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Task adding functionality
-    $('#taskForm').submit(function(event) {
+    $('#taskForm').submit(function (event) {
         event.preventDefault();
         var newTaskText = $('#newTask').val();
         if (newTaskText.trim() !== '') {
@@ -10,15 +10,17 @@ $(document).ready(function() {
     });
 
     // Task deleting functionality
-    $(document).on('click', '.deleteBtn', function() {
+    $(document).on('click', '.deleteBtn', function () {
         $(this).parent().remove();
     });
 
     // Task completion functionality
-    $(document).on('change', 'input[type="checkbox"]', function() {
+    $(document).on('change', 'input[type="checkbox"]', function () {
         $(this).siblings('span').toggleClass('completed');
     });
 
     // Enable drag-and-drop functionality
     $('#taskList').sortable();
+
+    $('#books').sortable();
 });

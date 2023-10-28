@@ -62,3 +62,10 @@ li.completed {
     border-radius: 5px;
     cursor: pointer;
 }
+
+#books {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
